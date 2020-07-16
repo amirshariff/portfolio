@@ -5,7 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import './App.css';
 
-import Footer from './components/Footer';
+import Footer from './Component/Footer';
 import HomePage from './Pages/HomePage';
 import ContactPage from './Pages/ContactPage';
 import AboutPage from './Pages/AboutPage';
@@ -57,7 +57,6 @@ class App extends React.Component {
 					<Route path="/" exact render={() => <HomePage title={this.state.home.title} subTitle={this.state.home.subTitle} text={this.state.home.text} />} />
 					<Route path="/contact" render={() => <ContactPage title={this.state.contact.title} />} />
 					<Route path="/about" render={() => <AboutPage title={this.state.about.title} />} />
-
 
 
 

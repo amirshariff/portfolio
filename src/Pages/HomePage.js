@@ -1,10 +1,13 @@
 import React from 'react';
+import Hero from '../Component/Hero'
+import Carousel from '../Component/Carousel'
 
-const HomePage = () => {
+const HomePage = (props) => {
     return (
         <div>
-            
-        </div>
+            <Hero hero={props} />
+            <Carousel />
+      </div>
     );
 }
 
