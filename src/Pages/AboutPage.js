@@ -1,11 +1,15 @@
 import React from 'react';
+import Hero from '../Component/Hero';
+import Content from '../Component/Content';
 
-const AboutPage = () => {
-    return (
-        <div>
-            about
-        </div>
-    );
-}
+const AboutPage = (props) => {
+	console.log(props.title);
+	return (
+		<div>
+			<div>{props.title}</div>
+			<Content></Content>
+		</div>
+	);
+};
 
 export default AboutPage;

@@ -1,26 +1,26 @@
 import React from 'react';
-import CardInfo from './CardInfo'
+import CardInfo from './CardInfo';
 
 const Card = (props) => {
-    return (
-			<div
-				className="d-inline-block a-card"
-				onClick={(e) => props.click(props.item)}
-			>
-				<img
-					className="a-card-image"
-					src={props.item.imgSrc}
-					alt={props.item.imgSrc}
+	return (
+		<div
+			className="d-inline-block a-card"
+			onClick={(e) => props.click(props.item)}
+		>
+			<img
+				className="a-card-image"
+				src={props.item.imgSrc}
+				alt={props.item.imgSrc}
+			/>
+			{props.item.selected && (
+				<CardInfo
+					title={props.item.title}
+					subTitle={props.item.subTitle}
+					link={props.item.link}
 				/>
-				{props.item.selected && (
-					<CardInfo
-						title={props.item.title}
-						subTitle={props.item.subTitle}
-						link={props.item.link}
-					/>
-				)}
-			</div>
-		);
-}
+			)}
+		</div>
+	);
+};
 
 export default Card;
