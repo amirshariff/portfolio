@@ -6,6 +6,7 @@ import Button from 'react-bootstrap/Button';
 import Hero from '../Component/Hero';
 import Content from '../Component/Content';
 
+
 class ContactPage extends React.Component {
 	state = {
 		name: '',
@@ -33,7 +34,18 @@ class ContactPage extends React.Component {
 		this.setState({
 			disabled: true,
 		});
-	};
+    };
+    
+    async form() {
+        const formResponse = await fetch(
+					'http://localhost:3000/api/email',
+					this.state
+        );
+        const formJson = await formResponse.json()
+        console.log(formJson)
+        return formJson
+    }
+
 
 	render() {
 		return (
